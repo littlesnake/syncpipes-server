@@ -1,0 +1,689 @@
+{
+  "$schema": "http://json-schema.org/draft-05/schema#",
+  "type": "object",
+  "properties": {
+    "processes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "href": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "href"
+        ]
+      }
+    },
+    "attributeDefinitions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "versions": {
+            "type": "array",
+            "items": {}
+          },
+          "readOnly": {
+            "type": "boolean"
+          },
+          "name": {
+            "type": "string"
+          },
+          "multiplicity": {
+            "type": "string"
+          },
+          "attributeType": {
+            "type": "string"
+          },
+          "entityType": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "icon": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "href": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "id",
+              "icon",
+              "name",
+              "href"
+            ]
+          },
+          "href": {
+            "type": "string"
+          },
+          "options": {
+            "type": "object",
+            "properties": {
+              "resourceType": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "resourceType"
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "versions",
+          "readOnly",
+          "name",
+          "multiplicity",
+          "attributeType",
+          "entityType",
+          "href",
+          "options"
+        ]
+      }
+    },
+    "icon": {
+      "type": "string"
+    },
+    "taskDefinitions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "attributeDefinitions": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "versions": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "action": {
+                        "type": "string"
+                      },
+                      "date": {
+                        "type": "string"
+                      },
+                      "type": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "action",
+                      "date",
+                      "type"
+                    ]
+                  }
+                },
+                "readOnly": {
+                  "type": "boolean"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "multiplicity": {
+                  "type": "string"
+                },
+                "attributeType": {
+                  "type": "string"
+                },
+                "entityType": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "icon": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "href": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "icon",
+                    "name",
+                    "href"
+                  ]
+                },
+                "href": {
+                  "type": "string"
+                },
+                "options": {
+                  "type": "object",
+                  "properties": {
+                    "entityType": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "string"
+                        },
+                        "icon": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "href": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "id",
+                        "icon",
+                        "name",
+                        "href"
+                      ]
+                    },
+                    "resourceType": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "entityType",
+                    "resourceType"
+                  ]
+                }
+              },
+              "required": [
+                "id",
+                "versions",
+                "readOnly",
+                "name",
+                "multiplicity",
+                "attributeType",
+                "entityType",
+                "href",
+                "options"
+              ]
+            }
+          },
+          "id": {
+            "type": "string"
+          },
+          "satisfies": {
+            "type": "array",
+            "items": {}
+          },
+          "name": {
+            "type": "string"
+          },
+          "tasks": {
+            "type": "array",
+            "items": {}
+          },
+          "preconditions": {
+            "type": "array",
+            "items": {}
+          },
+          "entityType": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "icon": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "href": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "id",
+              "icon",
+              "name",
+              "href"
+            ]
+          },
+          "href": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "attributeDefinitions",
+          "id",
+          "satisfies",
+          "name",
+          "tasks",
+          "preconditions",
+          "entityType",
+          "href"
+        ]
+      }
+    },
+    "workspace": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "href": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "href"
+      ]
+    },
+    "entitiesCount": {
+      "type": "integer"
+    },
+    "structurednessMetric": {
+      "type": "number"
+    },
+    "id": {
+      "type": "string"
+    },
+    "versions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "action": {
+            "type": "string"
+          },
+          "date": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "action",
+          "date",
+          "type"
+        ]
+      }
+    },
+    "consistencyMetric": {
+      "type": "integer"
+    },
+    "derivedAttributeDefinitions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "expression": {
+            "type": "string"
+          },
+          "id": {
+            "type": "string"
+          },
+          "versions": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "action": {
+                  "type": "string"
+                },
+                "date": {
+                  "type": "string"
+                },
+                "type": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "action",
+                "date",
+                "type"
+              ]
+            }
+          },
+          "visible": {
+            "type": "boolean"
+          },
+          "name": {
+            "type": "string"
+          },
+          "entityType": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "icon": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "href": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "id",
+              "icon",
+              "name",
+              "href"
+            ]
+          },
+          "mayEdit": {
+            "type": "boolean"
+          },
+          "inferredAttributeType": {
+            "type": "string"
+          },
+          "href": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "expression",
+          "id",
+          "versions",
+          "visible",
+          "name",
+          "entityType",
+          "mayEdit",
+          "inferredAttributeType",
+          "href"
+        ]
+      }
+    },
+    "name": {
+      "type": "string"
+    },
+    "allowFreeAttributes": {
+      "type": "boolean"
+    },
+    "associations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "versions": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "action": {
+                  "type": "string"
+                },
+                "date": {
+                  "type": "string"
+                },
+                "type": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "action",
+                "date",
+                "type"
+              ]
+            }
+          },
+          "readOnly": {
+            "type": "boolean"
+          },
+          "name": {
+            "type": "string"
+          },
+          "multiplicity": {
+            "type": "string"
+          },
+          "attributeType": {
+            "type": "string"
+          },
+          "entityType": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "icon": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "href": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "id",
+              "icon",
+              "name",
+              "href"
+            ]
+          },
+          "href": {
+            "type": "string"
+          },
+          "options": {
+            "type": "object",
+            "properties": {
+              "entityType": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "icon": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "href": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "id",
+                  "icon",
+                  "name",
+                  "href"
+                ]
+              },
+              "resourceType": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "entityType",
+              "resourceType"
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "versions",
+          "readOnly",
+          "name",
+          "multiplicity",
+          "attributeType",
+          "entityType",
+          "href",
+          "options"
+        ]
+      }
+    },
+    "customFunctions": {
+      "type": "array",
+      "items": {}
+    },
+    "incomingAssociations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "versions": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "action": {
+                  "type": "string"
+                },
+                "date": {
+                  "type": "string"
+                },
+                "type": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "action",
+                "date",
+                "type"
+              ]
+            }
+          },
+          "readOnly": {
+            "type": "boolean"
+          },
+          "name": {
+            "type": "string"
+          },
+          "multiplicity": {
+            "type": "string"
+          },
+          "attributeType": {
+            "type": "string"
+          },
+          "entityType": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "href": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "id",
+              "name",
+              "href"
+            ]
+          },
+          "href": {
+            "type": "string"
+          },
+          "options": {
+            "type": "object",
+            "properties": {
+              "entityType": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "icon": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "href": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "id",
+                  "icon",
+                  "name",
+                  "href"
+                ]
+              },
+              "resourceType": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "entityType",
+              "resourceType"
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "versions",
+          "readOnly",
+          "name",
+          "multiplicity",
+          "attributeType",
+          "entityType",
+          "href",
+          "options"
+        ]
+      }
+    },
+    "mayEdit": {
+      "type": "boolean"
+    },
+    "href": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "processes",
+    "attributeDefinitions",
+    "icon",
+    "taskDefinitions",
+    "workspace",
+    "entitiesCount",
+    "structurednessMetric",
+    "id",
+    "versions",
+    "consistencyMetric",
+    "derivedAttributeDefinitions",
+    "name",
+    "allowFreeAttributes",
+    "associations",
+    "customFunctions",
+    "incomingAssociations",
+    "mayEdit",
+    "href"
+  ]
+}

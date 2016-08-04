@@ -1,0 +1,55 @@
+{
+  "id": "http://some.site.somewhere/entry-schema#",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "Schema for Requirements MySQL loader",
+  "type": "object",
+  "required": [ "requirements", "tests" ],
+  "properties": {
+    "requirements": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "uid": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "short-description": {
+            "type": "string"
+          },
+          "long-description": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "uid",
+          "name",
+          "short-description",
+          "long-description"
+        ]
+      }
+    },
+    "tests": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "uid": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "uid",
+          "name"
+        ]
+      }
+    }
+  }
+}

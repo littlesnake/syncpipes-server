@@ -1,0 +1,160 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "Schema for GitHub Issue Loader",
+  "type": "object",
+  "anyOf": [
+    {"required": ["projects"]},
+    {"required": ["issues"]}
+  ],
+  "properties": {
+    "projects": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/project"
+      }
+    },
+    "issues": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/issue"
+      }
+    },
+    "comments": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/comment"
+      }
+    }
+  },
+  "additionalProperties": false,
+  "definitions": {
+    "project": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "github_id": {
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "full_name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "language": {
+          "type": "string"
+        },
+        "git_url": {
+          "type": "string"
+        },
+        "watcher_count": {
+          "type": "integer"
+        },
+        "stars_count": {
+          "type": "integer"
+        },
+        "created_at": {
+          "type": "string"
+        },
+        "updated_at": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "name",
+        "full_name",
+        "git_url",
+        "created_at"
+      ]
+    },
+    "issue": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "github_id": {
+          "type": "integer"
+        },
+        "project_id": {
+          "type": "integer"
+        },
+        "number": {
+          "type": "integer"
+        },
+        "title": {
+          "type": "string"
+        },
+        "body": {
+          "type": "string"
+        },
+        "user": {
+          "type": "string"
+        },
+        "state": {
+          "type": "string"
+        },
+        "created_at": {
+          "type": "string"
+        },
+        "updated_at": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "github_id",
+        "project_id",
+        "number",
+        "title",
+        "body",
+        "user",
+        "state",
+        "created_at"
+      ]
+    },
+    "comment": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "github_id": {
+          "type": "integer"
+        },
+        "issue_id": {
+          "type": "integer"
+        },
+        "body": {
+          "type": "integer"
+        },
+        "user": {
+          "type": "string"
+        },
+        "created_at": {
+          "type": "string"
+        },
+        "updated_at": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "github_id",
+        "issue_id",
+        "body",
+        "user",
+        "created_at"
+      ]
+    }
+  }
+}

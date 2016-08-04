@@ -1,0 +1,125 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "Schema for GitHub Issue extractor",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "description": "Project Object",
+    "properties": {
+      "id": {
+        "type": "integer"
+      },
+      "name": {
+        "type": "string"
+      },
+      "full_name": {
+        "type": "string"
+      },
+      "description": {
+        "type": "string"
+      },
+      "language": {
+        "type": "string"
+      },
+      "git_url": {
+        "type": "string"
+      },
+      "watchers_count": {
+        "type": "integer"
+      },
+      "stargazers_count": {
+        "type": "integer"
+      },
+      "created_at": {
+        "type": "string"
+      },
+      "updated_at": {
+        "type": "string"
+      },
+      "issues": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "number": {
+              "type": "integer"
+            },
+            "title": {
+              "type": "string"
+            },
+            "body": {
+              "type": "string"
+            },
+            "user": {
+              "type": "string"
+            },
+            "state": {
+              "type": "string"
+            },
+            "created_at": {
+              "type": "string"
+            },
+            "updated_at": {
+              "type": "string"
+            },
+            "comments": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "integer"
+                  },
+                  "body": {
+                    "type": "string"
+                  },
+                  "user": {
+                    "type": "string"
+                  },
+                  "created_at": {
+                    "type": "string"
+                  },
+                  "updated_at": {
+                    "type": "string"
+                  }
+                },
+                "additionalProperties": false,
+                "required": [
+                  "id",
+                  "body",
+                  "user",
+                  "created_at",
+                  "updated_at"
+                ]
+              }
+            }
+          },
+          "additionalProperties": false,
+          "required": [
+            "id",
+            "number",
+            "title",
+            "body",
+            "user",
+            "state",
+            "created_at"
+          ]
+        }
+      }
+    },
+    "additionalProperties": false,
+    "required": [
+      "id",
+      "name",
+      "full_name",
+      "description",
+      "git_url",
+      "watcher_count",
+      "stars_count",
+      "created_at"
+    ]
+  }
+}

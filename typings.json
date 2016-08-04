@@ -1,0 +1,26 @@
+{
+  "globalDependencies": {
+    "amqplib": "registry:dt/amqplib#0.3.0+20160317120654",
+    "body-parser": "registry:dt/body-parser#0.0.0+20160317120654",
+    "dotenv": "registry:dt/dotenv#2.0.0+20160327131627",
+    "express": "registry:dt/express#4.0.0+20160317120654",
+    "express-serve-static-core": "registry:dt/express-serve-static-core#0.0.0+20160322035842",
+    "mime": "registry:dt/mime#0.0.0+20160316155526",
+    "mocha": "registry:dt/mocha#2.2.5+20160317120654",
+    "mongoose": "registry:dt/mongoose#3.8.5+20160316155526",
+    "multer": "registry:dt/multer#0.0.0+20160317120654",
+    "mysql": "registry:dt/mysql#0.0.0+20160316155526",
+    "node": "registry:dt/node#4.0.0+20160330064709",
+    "restful.js": "registry:dt/restful.js#0.6.2+20160316155526",
+    "serve-static": "registry:dt/serve-static#0.0.0+20160317120654",
+    "when": "registry:dt/when#2.4.0+20160317120654",
+    "xlsx": "registry:dt/xlsx#0.0.0+20160316155526"
+  },
+  "dependencies": {
+    "ajv": "registry:npm/ajv#3.5.0+20160208185606",
+    "chai": "registry:npm/chai#3.5.0+20160415060238",
+    "cors": "registry:npm/cors#2.7.0+20160505024722",
+    "lodash": "registry:npm/lodash#4.0.0+20160416211519",
+    "request": "registry:npm/request#2.69.0+20160304121250"
+  }
+}
