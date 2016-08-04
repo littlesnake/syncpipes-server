@@ -21,8 +21,8 @@ describe('SocioCortexTypesExtractor test', () => {
                 extractorConfig: <IServiceConfig>{
                     config: {
                         "url" : "https://server.sociocortex.com/api/v1",
-                        "username" : "manoj5864@gmail.com",
-                        "password" : "@Sebis5864",
+                        "username" : "mail@gmail.com",
+                        "password" : "password",
                         "workspace": "Northwind"
                     }
                 }
