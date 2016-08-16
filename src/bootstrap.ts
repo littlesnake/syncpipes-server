@@ -2,11 +2,14 @@ import { config } from 'dotenv';
 import { Kernel } from './app/index';
 import { RequirementsExcelExtractorService } from "./services/requirementsExcelExtractor/service";
 import { RequirementsMySQLLoaderService } from "./services/requirementsMysqlLoader/service";
+import { TasksExcelExtractorService } from "./services/tasksExcelExtractor/service";
+import { TasksMySQLLoaderService } from "./services/tasksMysqlLoader/service";
 import { GitHubIssueExtractorService } from "./services/githubIssueExtractor/service";
 import { PureIssueLoaderService } from "./services/pureIssueLoader/service";
 import { JiraIssueExtractorService } from "./services/jiraIssueExtractor/service";
 import { SocioCortexWorkspaceExtractorService } from "./services/scExtractor/workspacesExtractor/workspaceService";
 import { SocioCortexTypesExtractorService } from "./services/scExtractor/typesExtractor/typesService";
+
 
 // parse .env file
 config({silent: true});
@@ -28,6 +31,8 @@ let kernel = new Kernel({
 // load extensions
 kernel.loadService(new RequirementsExcelExtractorService());
 kernel.loadService(new RequirementsMySQLLoaderService());
+kernel.loadService(new TasksExcelExtractorService());
+kernel.loadService(new TasksMySQLLoaderService());
 kernel.loadService(new GitHubIssueExtractorService());
 kernel.loadService(new PureIssueLoaderService());
 kernel.loadService(new JiraIssueExtractorService());

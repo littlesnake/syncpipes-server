@@ -1,0 +1,46 @@
+{
+  "id": "http://some.site.somewhere/entry-schema#",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "Schema for Tasks MySQL loader",
+  "type": "object",
+  "required": [
+    "tasks"
+  ],
+  "properties": {
+    "tasks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "uid": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "effort": {
+            "type": "number"
+          },
+          "parentTask": {
+            "type": "string"
+          },
+          "requirement": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "uid",
+          "name",
+          "description",
+          "effort",
+          "parentTask",
+          "requirement"
+        ]
+      }
+    }
+  }
+}
