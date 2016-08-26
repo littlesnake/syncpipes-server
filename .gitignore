@@ -7,6 +7,5 @@ dist
 npm-debug.log
 coverage
 typings/*
-.env
 src/**/*.js
 src/**/*.js.map

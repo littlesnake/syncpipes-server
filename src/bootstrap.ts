@@ -18,7 +18,7 @@ config({silent: true});
 let kernel = new Kernel({
     "port": process.env.SYNCPIPES_PORT || 3010,
     "mongo": {
-        "url": process.env.SYNCPIPES_MONGO_URL || "mongodb://localhost/syncpipes"
+        "url": process.env.SYNCPIPES_MONGO_URL || "mongodb://guest:guest@localhost/syncpipes?authSource=admin"
     },
     "rabbitmq": {
         "host": process.env.SYNCPIPES_RABBIT_HOST || "localhost",

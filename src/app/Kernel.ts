@@ -50,7 +50,7 @@ export class Kernel {
      */
     public boot(): Promise<any> {
         // connect to mongo
-        mongoose.connect(this.config.mongo.url);
+        mongoose.connect(this.config.mongo.url, { auth : "admin" });
         mongoose.Promise = global.Promise;
         // config scheduler
         let scheduler = Container.get<IJobScheduler>('scheduler');

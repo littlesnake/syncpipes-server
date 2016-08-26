@@ -41,7 +41,15 @@ export class JobScheduler implements IJobScheduler {
         this.config = config;
         return new Promise<any>((resolve, reject) => {
             // connect
-            amqp.connect(this.amqpUrl()).then((conn) => {
+            var fs = require('fs');
+            var opts = {
+                cert: fs.readFileSync('./cert/testca/client/cert.pem'),
+                key: fs.readFileSync('./cert/testca/client/key.pem'),
+                //pfx: fs.readFileSync('D:\\ws\\syncpipes3\\syncpipes\\syncpipes-server\\cert\\client\\keycert.p12'),
+                passphrase: 'MySecretPassword',
+                ca: [fs.readFileSync('./cert/testca/cacert.pem')]
+            };
+            amqp.connect(this.amqpUrl(), opts).then((conn) => {
                 conn.createChannel().then((ch) => {
                     ch.assertQueue(this.queueName, {durable: true}).then(() => {
                         this.channel = ch;
@@ -137,7 +145,7 @@ export class JobScheduler implements IJobScheduler {
     }
 
     private amqpUrl(): string {
-        let url = 'amqp://';
+        let url = 'amqps://';
         if (this.config.password !== "" && this.config.user != "") {
             url += `${this.config.user}:${this.config.password}@`;
         }
